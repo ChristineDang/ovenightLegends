@@ -1,10 +1,15 @@
 .App {
   text-align: center;
-
+  background: url("./background/doodle-icon.jpg");
+  width: fill;
+  height: 150vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .App-header {
-  background-image: url('./background/stars.jpg');
+  background-image: url("./background/stars.jpg");
   background-color: black;
   min-height: 50vh;
   display: flex;
@@ -13,9 +18,64 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.main-container {
+  position: relative;
+  min-height: 100%;
+}
+
+/* Company Title */
+.overnight {
+  position: absolute;
+  bottom: 8px;
+  font-size: 50px;
+}
+
+.legends {
+  top: 5px;
+  font-size: 50px;
+}
+
+.companyName {
+  padding: 10px;
+  padding-top: none;
+  margin-top: none;
 }
 
 /* Home Page Introduction Section */
 .introduction {
-  font-size: 12px;
+  font-size: 20px;
+}
+
+.introScript {
+  position: absolute;
+  top: 10px;
+}
+
+.selections {
+  padding-top: 10%;
+}
+
+/* Recent Customers */
+.recent-customer {
+  background-image: url("./background/stars.jpg");
+  height: 50vh;
+  display: cover;
+  width: 100%;
+}
+
+.customer-header {
+  color: white;
+  padding-top: 10px;
+}
+
+.customer-list {
+  padding-top: 100px;
+  max-width: 50%;
+  font-size: 20px;
+  font-weight: bold;
 }

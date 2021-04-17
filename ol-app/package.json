@@ -11,7 +11,7 @@
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^4.0.3",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
@@ -38,20 +38,15 @@
       "last 1 safari version"
     ]
   },
-
   "presets": [
     [
       "@babel/preset-react",
       {
-        "pragma": "dom", 
-        "pragmaFrag": "DomFrag", 
-        "throwIfNamespace": false, 
+        "pragma": "dom",
+        "pragmaFrag": "DomFrag",
+        "throwIfNamespace": false,
         "runtime": "classic"
       }
     ]
   ]
-
 }
-
-
-
