@@ -1,31 +1,60 @@
 import React from 'react';
 import './nav.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Dropdown, Form, FormControl, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react';
 
 class Navbarf extends React.Component {
 render(){
     return (
     
-        <Navbar bg="dark" expand="lg">
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar id="navbarfy">
+        <Navbar.Brand id="home" href="#home">Overnight Legends</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+          <Nav classNameName="mr-auto">
+            <Nav.Link id="home" href="#home">Home</Nav.Link>
+            {/* <Nav.Link id="home" href="#link">Packages</Nav.Link> */}
+
+            <NavDropdown id="home" title="Shop">
+              <ul classNameName="dropdown-menu multi-column columns-2">             
+                <div classNameName="row">
+                      <div classNameName="col-sm-6">
+                        <ul className="multi-column-dropdown">
+                          <NavDropdown.Item id="dropdown" href="#action/3.1">Non-Affiliate</NavDropdown.Item>
+                          <NavDropdown.Item id="dropdown" href="#action/3.1">Alerts</NavDropdown.Item>
+                          <NavDropdown.Item id="dropdown" href="#action/3.3">Overlays</NavDropdown.Item>
+                          <NavDropdown.Item id="dropdown" href="#action/3.3">Panels</NavDropdown.Item>
+                          <NavDropdown.Item id="dropdown" href="#action/3.3">Scenes</NavDropdown.Item>
+                          <NavDropdown.Item id="dropdown" href="#action/3.3">Transitions</NavDropdown.Item>
+                        </ul>
+                      </div>
+
+                      <div className="col-md-6">
+                        <ul className="multi-column-dropdown">
+                            <NavDropdown.Item id="dropdown" href="#action/3.1">Affiliate</NavDropdown.Item>
+                            <NavDropdown.Item id="dropdown" href="#action/3.1">Alerts</NavDropdown.Item>
+                            <NavDropdown.Item id="dropdown" href="#action/3.3">Badges</NavDropdown.Item>
+                            <NavDropdown.Item id="dropdown" href="#action/3.2">Emotes</NavDropdown.Item>
+                            <NavDropdown.Item id="dropdown" href="#action/3.3">Overlays</NavDropdown.Item>
+                            <NavDropdown.Item id="dropdown" href="#action/3.3">Panels</NavDropdown.Item>
+                            <NavDropdown.Item id="dropdown" href="#action/3.3">Scenes</NavDropdown.Item>
+                            <NavDropdown.Item id="dropdown" href="#action/3.3">Transitions</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.4">Packages</NavDropdown.Item>
+                        </ul>
+                      </div>
+                </div> 
+              </ul>
+
             </NavDropdown>
+            
+            <Nav.Link id="home" href="#link">Contact</Nav.Link>
           </Nav>
-          <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+          {/* <Form inline>
+            <FormControl type="text" placeholder="Search" classNameName="mr-sm-2" />
             <Button variant="outline-success">Search</Button>
-          </Form>
+          </Form> */}
         </Navbar.Collapse>
       </Navbar>
     )

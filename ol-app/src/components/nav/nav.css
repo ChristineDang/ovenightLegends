@@ -1,3 +1,18 @@
-.Navbar{
-    color: white;
+#navbarfy{
+    position: absolute;
+    z-index: 9999;
+}
+
+#home{
+    color: wheat;
+    
+}
+
+#dropdown{
+    width: 600px;
+
+}
+
+.NavDropdown{
+    columns: 2;
 }
