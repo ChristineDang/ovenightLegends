@@ -16,36 +16,38 @@ render(){
             <Nav.Link id="home" href="#home">Home</Nav.Link>
             {/* <Nav.Link id="home" href="#link">Packages</Nav.Link> */}
 
-            <NavDropdown id="home" title="Shop">
-              <ul classNameName="dropdown-menu multi-column columns-2">             
-                <div classNameName="row">
-                      <div classNameName="col-sm-6">
-                        <ul className="multi-column-dropdown">
-                          <NavDropdown.Item id="dropdown" href="#action/3.1">Non-Affiliate</NavDropdown.Item>
-                          <NavDropdown.Item id="dropdown" href="#action/3.1">Alerts</NavDropdown.Item>
-                          <NavDropdown.Item id="dropdown" href="#action/3.3">Overlays</NavDropdown.Item>
-                          <NavDropdown.Item id="dropdown" href="#action/3.3">Panels</NavDropdown.Item>
-                          <NavDropdown.Item id="dropdown" href="#action/3.3">Scenes</NavDropdown.Item>
-                          <NavDropdown.Item id="dropdown" href="#action/3.3">Transitions</NavDropdown.Item>
-                        </ul>
-                      </div>
+            <NavDropdown id="home" classNameName="dropdown-menu multi-column columns-2" title="Shop">
+            <div className="drip">
+            <h5>Non-Affiliate</h5>
+              <div className="multi-column-dropdown">
+              {/* <ul classNameName="dropdown-menu multi-column columns-2">              */}
+                        {/* <ul className="multi-column-dropdown"> */}
 
-                      <div className="col-md-6">
-                        <ul className="multi-column-dropdown">
-                            <NavDropdown.Item id="dropdown" href="#action/3.1">Affiliate</NavDropdown.Item>
-                            <NavDropdown.Item id="dropdown" href="#action/3.1">Alerts</NavDropdown.Item>
-                            <NavDropdown.Item id="dropdown" href="#action/3.3">Badges</NavDropdown.Item>
-                            <NavDropdown.Item id="dropdown" href="#action/3.2">Emotes</NavDropdown.Item>
-                            <NavDropdown.Item id="dropdown" href="#action/3.3">Overlays</NavDropdown.Item>
-                            <NavDropdown.Item id="dropdown" href="#action/3.3">Panels</NavDropdown.Item>
-                            <NavDropdown.Item id="dropdown" href="#action/3.3">Scenes</NavDropdown.Item>
-                            <NavDropdown.Item id="dropdown" href="#action/3.3">Transitions</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Packages</NavDropdown.Item>
-                        </ul>
-                      </div>
-                </div> 
-              </ul>
+                          <NavDropdown.Item  href="#action/3.1">Alerts</NavDropdown.Item>
+                          <NavDropdown.Item  href="#action/3.3">Overlays</NavDropdown.Item>
+                          <NavDropdown.Item  href="#action/3.3">Panels</NavDropdown.Item>
+                          <NavDropdown.Item  href="#action/3.3">Scenes</NavDropdown.Item>
+                          <NavDropdown.Item  href="#action/3.3">Transitions</NavDropdown.Item>
+                        {/* </ul> */}
+            </div>
+            <NavDropdown.Divider />
+            <h5>Affiliate</h5>
+            <div className="multi-column-dropdown">
+                        {/* <ul className="multi-column-dropdown"> */}
+
+                            <NavDropdown.Item  href="#action/3.1">Alerts</NavDropdown.Item>
+                            <NavDropdown.Item  href="#action/3.3">Badges</NavDropdown.Item>
+                            <NavDropdown.Item  href="#action/3.2">Emotes</NavDropdown.Item>
+                            <NavDropdown.Item  href="#action/3.3">Overlays</NavDropdown.Item>
+                            <NavDropdown.Item  href="#action/3.3">Panels</NavDropdown.Item>
+                            <NavDropdown.Item  href="#action/3.3">Scenes</NavDropdown.Item>
+                            <NavDropdown.Item  href="#action/3.3">Transitions</NavDropdown.Item>
+                            {/* <NavDropdown.Divider />
+                            <NavDropdown.Item href="#action/3.4">Packages</NavDropdown.Item> */}
+                        {/* </ul> */}
+              {/* </ul> */}
+              </div>
+              </div>
 
             </NavDropdown>
             

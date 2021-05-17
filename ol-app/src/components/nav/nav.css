@@ -4,15 +4,21 @@
 }
 
 #home{
-    color: wheat;
+    color: white;
     
 }
 
-#dropdown{
-    width: 600px;
-
+.drip{
+    padding-left: 50px;
+    padding-right: 50px;
 }
+/* #dropdown{
+    width: 1000px;
 
-.NavDropdown{
-    columns: 2;
+} */
+
+
+.multi-column-dropdown {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
