@@ -66,6 +66,8 @@
   height: 50vh;
   display: cover;
   width: 100%;
+  padding-top: 50px;
+  padding-right: 50px;
 }
 
 .customer-header {

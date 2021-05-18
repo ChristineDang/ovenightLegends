@@ -1,0 +1,31 @@
+.menu {
+  background: blue;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  z-index: 1;
+  padding-top: 55px;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-links {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+}
+
+.menu-links:hover {
+  color: white;
+  opacity: 0.5;
+}
+
+svg {
+  z-index: 2;
+  position: fixed;
+  right: 40px;
+  top: 30px;
+}

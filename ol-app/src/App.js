@@ -1,14 +1,17 @@
+import React from "react";
 import "./App.css";
-import { Container, Row, Col, Card } from "react-bootstrap";
-import { Jumbotron, ListGroup } from "react-bootstrap";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Jumbotron, Table } from "react-bootstrap";
 //import background from "./background/doodle-icon.jpg";
 import emote from "./background/choncc_panda_nice.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbarf from "./components/nav";
+// import Menu from "./components/menu";
 //import selectionpg from "./components/selection";
 import Selections from "./components/carousel";
 import Footer from "./components/footer";
 import Socials from "./components/socials";
+import ToggleModal from "./components/toggleModal";
 // const backgroundImg = {
 //   width: "fill",
 //   height: "150vh",
@@ -25,6 +28,7 @@ function App() {
   return (
     <div className="App">
       <Navbarf></Navbarf>
+      <ToggleModal />
       <Jumbotron className="App-header">
         <h1 className="overnight">OVERNIGHT</h1>
       </Jumbotron>
@@ -62,14 +66,35 @@ function App() {
         <Col xs={4}>
           <h1 className="customer-header">Recent Customers</h1>
         </Col>
-        <Col>
-          <ListGroup className="customer-list">
-            <ListGroup.Item>TheDangster101</ListGroup.Item>
-            <ListGroup.Item>formosaboba</ListGroup.Item>
-            <ListGroup.Item>forukotan</ListGroup.Item>
-            <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-            <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-          </ListGroup>
+        <Col className="justify-content-md-center">
+          <Table striped bordered hover responsive variant="dark">
+            <thead>
+              <tr>
+                <th>Top Customers</th>
+                <th>Username</th>
+                <th>Twitch Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>formosaboba</td>
+                <td>
+                  <a href="https://twitch.com/formosaboba">formosaboba</a>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Larry the Bird</td>
+                <td>formosaboba</td>
+              </tr>
+            </tbody>
+          </Table>
         </Col>
       </Row>
       <Socials></Socials>
