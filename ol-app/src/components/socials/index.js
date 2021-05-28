@@ -3,7 +3,7 @@ import "./socials.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
 import ReactDOM from "react-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaInstagram, FaTwitch, FaTwitter, FaFireAlt } from "react-icons/fa";
 
 import ig from "./ig.png";
 
@@ -11,18 +11,10 @@ function Socials(props) {
   return (
     <Row className="justify-content-md-center">
       <Col>
-        <a href="https://www.twitch.tv/formosaboba" target="_blank">
-          <FontAwesomeIcon
-            className="social-icons"
-            icon={["fab", "twitch"]}
-            size="3x"
-          />
-        </a>
-        <FontAwesomeIcon icon={["fab", "apple"]} />
-        <img className="social-icons" src={ig}></img>
-        <img className="social-icons" src={ig}></img>
-        <img className="social-icons" src={ig}></img>
-        <img className="social-icons" src={ig}></img>
+        <FaInstagram className="icons" size="3rem" />
+        <FaTwitch className="icons " size="3rem" />
+        <FaTwitter className="icons" size="3rem" />
+        <FaFireAlt className="icons" size="3rem" />
       </Col>
     </Row>
   );

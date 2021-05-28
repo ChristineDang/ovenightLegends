@@ -1,15 +1,24 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
-import { Form, Row, Col } from "react-bootstrap";
+import { Form, Button, Row, Col } from "react-bootstrap";
+import "./contact.css";
 
-export default function ContactForm() {
+export default function ContactForm(props) {
   const [mailerState, setMailerState] = useState({
     fname: "",
     lname: "",
     email: "",
     message: "",
   });
+
+  // When a user types in information to the form
+  function handleStateChange(event) {
+    setMailerState((previousState) => ({
+      ...previousState,
+      [event.target.name]: event.target.value,
+    }));
+  }
 
   const submitEmail = async (e) => {
     e.preventDefault();
@@ -22,43 +31,48 @@ export default function ContactForm() {
       body: JSON.stringify({ mailerState }),
     })
       .then((res) => res.json())
+      .then(async (res) => {
+        const resData = await res;
+        console.log(resData);
+        if (resData.status === "Success") {
+          alert("Message was sent");
+        } else if (resData.status === "fail") {
+          alert("Message failed to send");
+        }
+      })
       .then(() => {
         setMailerState({
           email: "",
-          name: "",
+          fname: "",
+          lname: "",
           message: "",
         });
       });
   };
-  // When a user types in information to the form
-  function handleStateChange(event) {
-    setMailerState((previousState) => ({
-      ...previousState,
-      [event.target.name]: event.target.value,
-    }));
-  }
 
   return (
     <div className="contact-form">
       <Form onSubmit={submitEmail}>
-        <Form.Group controlId="exampleForm.ControlInput1">
+        <Form.Group controlId="exampleForm.ControlInput">
           <Form.Label>Name</Form.Label>
           <Form.Row>
             <Col>
               <Form.Control
+                type="text"
                 placeholder="First name"
+                name="fname"
                 onChange={handleStateChange}
-                name="first-name"
                 value={mailerState.fname}
-              />
+              ></Form.Control>
             </Col>
             <Col>
               <Form.Control
+                type="text"
                 placeholder="Last name"
                 onChange={handleStateChange}
-                name="last-name"
+                name="lname"
                 value={mailerState.lname}
-              />
+              ></Form.Control>
             </Col>
           </Form.Row>
         </Form.Group>
@@ -83,6 +97,23 @@ export default function ContactForm() {
             value={mailerState.message}
           />{" "}
         </Form.Group>
+        <Button
+          className="form-button"
+          id="cancelBtn"
+          variant="secondary"
+          onClick={props.onHide}
+        >
+          Cancel
+        </Button>
+        <Button
+          className="form-button"
+          id="submitBtn"
+          variant="primary"
+          type="submit"
+          onClick={props.onHide}
+        >
+          Submit
+        </Button>
       </Form>
     </div>
   );

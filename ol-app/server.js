@@ -1,8 +1,14 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const app = express();
+const cors = require("cors");
 require("dotenv").config();
 
+// our middleware
+app.use(express.json());
+app.use(cors());
+
+// transporter for nodmailer type OAuth2
 let transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -15,6 +21,7 @@ let transporter = nodemailer.createTransport({
   },
 });
 
+//does the transporter connect with success
 transporter.verify((err, success) => {
   err
     ? console.log(err)
@@ -24,22 +31,26 @@ transporter.verify((err, success) => {
 // POST EMAIL
 app.post("/send", function (req, res) {
   let mailOptions = {
-    from: "test@gmail.com",
+    from: `${req.body.mailerState.email}`,
     to: process.env.EMAIL,
-    subject: "Nodemailer API",
-    text: "Hi from your nodemailer API",
+    subject: `Message from: ${req.body.mailerState.email}`,
+    text: `${req.body.mailerState.message}`,
   };
 
+  // send json back to react so we can alert the user the email was actually sent
   transporter.sendMail(mailOptions, function (err, data) {
     if (err) {
-      console.log("Error " + err);
+      res.json({
+        status: "fail",
+      });
     } else {
-      console.log("Email sent successfully");
-      res.json({ status: "Email sent" });
+      console.log("Message has been sent to Overnight Legends");
+      res.json({ status: "Success" });
     }
   });
 });
 
+// connect to port 3001
 const port = 3001;
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);

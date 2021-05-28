@@ -1,0 +1,12 @@
+.btn-circle {
+  background-color: #0b345b;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 30px;
+}
+
+/* @media (min-width: 769px) {
+  .btn-circle {
+    float: right;
+  }
+} */

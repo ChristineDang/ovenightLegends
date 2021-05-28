@@ -19,13 +19,11 @@ export default function OurModal(props) {
       </Modal.Header>
       <Modal.Body>
         <h4>Contact Us</h4>
-        <p>
-          <Contact></Contact>
-        </p>
+        <div>
+          <Contact {...props}></Contact>
+        </div>
       </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
-      </Modal.Footer>
+      <Modal.Footer></Modal.Footer>
     </Modal>
   );
 }
