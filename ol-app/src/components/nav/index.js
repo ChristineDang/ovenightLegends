@@ -1,8 +1,8 @@
 import React from 'react';
 import './nav.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Nav, NavDropdown, Dropdown, Form, FormControl, Button } from 'react-bootstrap';
-import { Container, Row, Col } from 'react';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+// import { Container, Row, Col } from 'react';
 
 class Navbarf extends React.Component {
 render(){
